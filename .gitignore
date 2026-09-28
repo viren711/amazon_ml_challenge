@@ -1,0 +1,32 @@
+# Competition data (2.4 GB) -- download separately into student_resource/dataset/
+student_resource/dataset/
+
+# Generated outputs -- rebuild with scripts/run_pipeline.sh and scripts/make_submission.sh
+output/
+submission/
+artifacts/test_probs/
+*.npz
+*.zip
+
+# Earlier pipeline's model and outputs (kept locally for comparison only)
+archive/v1/
+
+# Saved third-party competition web page
+docs/reference/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Logs and scratch
+*.log
+scratch*/
+tmp/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

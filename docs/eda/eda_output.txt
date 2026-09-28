@@ -1,0 +1,75 @@
+=== Row counts ===
+S1=2206821  S2=5034616  S3=5285603  GT rows=2206821
+
+=== Country distribution (S1) ===
+country
+US       1323633
+India     883188
+Name: count, dtype: int64
+
+=== Country distribution (S2) ===
+country
+US       3016817
+India    2017799
+Name: count, dtype: int64
+
+=== Country distribution (S3) ===
+country
+US       3170056
+India    2115547
+Name: count, dtype: int64
+
+=== Match cardinality ===
+singleton (0 matches): 123247 (5.5848%)
+non-singleton: 2083574
+avg matches per non-singleton: 3.666
+max matches: 11
+matched_entity_ids
+0     123247
+1     119157
+2     375212
+3     530841
+4     484115
+5     321957
+6     164868
+7      63968
+8      18680
+9       4205
+10       534
+11        37
+Name: count, dtype: int64
+
+matched ids from S2: 3693619, from S3: 3944746
+
+=== Sample noisy name pairs (S1 vs matched) ===
+S1: 'Maure Williams Colombier Inc' | '85 Wayne Avenue, Ticonderoga, NY' | US
+   -> S3-11291185: 'maurewilliamscolombier.com' | 'Wayne Ave, Ticonderoga Townshiip, New York' | US
+   -> S2-681193310: 'Maure Wilblims Colombier Inc' | '' | US
+   -> S3-860443364: 'Maure Williams Inc Center' | '' | US
+   -> S3-775321672: 'Dréxkor' | '85 Wanye Avenue, Ticonderoga Townshiip, New York' | US
+   -> S2-743505751: 'Maure Williams Colombier' | '' | US
+
+S1: 'Raj Investments LLP' | '6(29), C.I.T. Colony, 2Nd Main Road Mylapore, Chennai, Tamil Nadu' | India
+   -> S3-478195123: 'Raj Investments எல்எல்பி' | '6(29), C.i.t. Colony, 2Nd Main Road Mylapore, Chennai, TN' | India
+   -> S2-249013014: 'ராஜ் இன்வெஸ்ட்மெண்ட்ஸ் எல்எல்பி' | '6(29), C.I.T. COLONY, 2ND MAIN ROAD MYLAPORE, CHENNAI, Tamil Nadu' | India
+   -> S3-384364074: 'ராஜ் இன்வெஸ்ட்மெண்ட்ஸ் எல்எல்பி' | '6(29), C.i.t. Colony, 2Nd Main Road Mylapore, Chennai, தமிழ்நாடு' | India
+   -> S2-197070651: 'Raj Investments LLP' | '6(29), C.I.T. COLONY, 2ND MAIN ROAD MYLAPORE, CHENNAI, Tamil Nadu' | India
+
+S1: 'Dahlia Power Reliable Scientific LLC' | '630 45th Terrace, Kansas City, MO' | US
+   -> S2-790675320: 'Dahlia Power Reliable' | 'KANSAS CITY, MO, 630 45ND TERRACE, null' | US
+   -> S2-479876582: 'Dahlia Power Reliable Scientific' | '45ND TERRACE, null, KANSAS CITY, MO' | US
+   -> S3-878454467: 'Dahlia Ponr Reliable Scientific LLC' | 'Missouri, 630 45th Terrace, Kansas City' | US
+
+S1: 'Ss Food Private Limited' | 'Af-684, Nandgram Near Mother India Public School. Ph. 989, 9487203, Ghaziabad, Uttar Pradesh' | India
+   -> S2-24659151: 'एसएस फूड प्राइवेट लिमिटेड' | 'AF-0684, Uttar Pradesh, GHAZIABAD, 9487203' | India
+   -> S2-153058913: 'एसएस फूड प्राइवेट लिमिटेड' | 'AF-0684, NANDGRAM NEAR MOTHER INDIA PUBLIC SCHOOL. PH. 989, GHAZIABAD, 9487203, उत्तर प्रदेश' | India
+   -> S3-679606215: 'एसएस फूड प्राइवेट लिमिटेड' | 'Af-684, Ghaziabad, UP' | India
+
+S1: 'Payne Enterprises' | '3315 Fremont Street, Peoria, IL' | US
+   -> S2-553508714: 'Payne Enterpires' | '3315 FREMONT ST, PEORIA, IL' | US
+   -> S3-449308785: 'Payne Enterprises  LLC' | 'Fremont St, Peoria, Illinois' | US
+   -> S2-478959098: 'Payne Énterprises' | '3315 FREMONT ST, PEORIA, IL' | US
+   -> S3-928796641: 'Payne Énterprises' | '3315 Fremont Street, Peoria, Illinois' | US
+   -> S2-625774905: 'PAYNE-ENRTPRMISES' | '3315 FREMONT SAINT, PEORIA, IL' | US
+   -> S3-728090388: 'Payne Etrepndiels' | '3315 Fremont St, Peoria, Illinois' | US
+
